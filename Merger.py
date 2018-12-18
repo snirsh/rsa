@@ -14,5 +14,6 @@ def main():
     print("total rows: {0}".format(len(data)))
     print(list(data)[0])
 
+
 if __name__ == '__main__':
     main()
