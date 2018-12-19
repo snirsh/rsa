@@ -1,5 +1,6 @@
 import pandas as pd
 import glob
+import xlrd
 
 
 def main():
@@ -10,9 +11,13 @@ def main():
     writer = pd.ExcelWriter('merged_input.xlsx')
     merged_file.to_excel(writer, sheet_name='sheet1')
     writer.save()
-    data = pd.read_excel('merged_input.xlsx')
-    print("total rows: {0}".format(len(data)))
-    print(list(data)[0])
+    # data = pd.read_excel('merged_input.xlsx')
+    # date is saved in list(data)[1]
+    # tz is saved in list(data)[3]
+    # status is saved in list(data)[11]
+    # type is saved in list(data)[13]
+    # location is saved in list(data)[54]
+    # id_numbers = data[(list(data)[3])]
 
 
 if __name__ == '__main__':
